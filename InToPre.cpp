@@ -42,8 +42,8 @@ string reverseString(string a)
     return b;
 }
 
-// Day la cach khai bao stack ngay trong ham
-string inToPre(string infix)
+// Day la cach truyen stack tu ngoai vao
+string inToPre(stack <char> s, string infix)
 {
     string prefix = "";
     stack <char> s;
@@ -117,10 +117,11 @@ int main()
 {
     string infix;
     string prefix;
+    stack <char> s;
     cout << "Enter an infix expression: ";
     cin >> infix;
     cout << "Infix Expression: " << infix << endl;
-    prefix = inToPre(infix);
+    prefix = inToPre(s, infix);
     cout << "Prefix Expression: " << prefix << endl;
 
     return 0;
